@@ -1,0 +1,436 @@
+/* CSS Stylesheet */
+
+/* @media queries are to make the site responsive */
+
+
+*{
+    margin: 0;
+    padding : 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* Header of the opening page */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.transaction{
+    background-image:  url(images/2.png);
+}
+
+.courses{
+    background-image: url(images/courses.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* navigation bar */
+nav{
+    display: flex;
+    padding: 0 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background : rgb(33,123,201);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+@media(max-width: 700px){
+    
+    .nav-links{
+        text-align: center;
+    }
+
+    .nav-links ul li{
+        padding: 8px 6px;
+    }
+}
+
+
+.textbox{
+    width: 90%;
+    color: rgb(134,231,250);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+}
+
+.textbox h1{
+    font-size: 62px;
+}
+
+.textbox p{
+    margin: 10px 0 40 px;
+    font-size: 18px;
+    color : rgb(134,231,250);
+
+}
+
+.textbox a{
+    transition: 0.2s;
+}
+
+@media(max-width: 700px){
+    .textbox{
+        width: 60%;
+    }
+
+    .textbox h1{
+        font-size: 50px;
+    }
+    .textbox p{
+        margin: 10px 20px 40px 0;
+        font-size: 16px;   
+    }
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(134,231,250);
+    border: 1px solid rgb(134,231,250);
+    padding: 12px 34px;
+    font-size: 13px;
+    background : transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid rgb(29, 25, 128);
+    background : rgb(29, 25, 128);
+    transition: 1s;
+}
+
+
+/* Services flexbox */
+.service{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: rgb(1,9,32);
+    line-height: 22px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 700px){
+    .row
+    {flex-direction: column ;}
+}
+
+
+.service-col{
+    flex-basis: 31%;
+    background: rgb(198, 245, 255);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.service-col:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: rgb(134,231,250);
+}
+
+
+/* Contact Us */
+.cta{
+    margin: 100px auto;
+    width :80%;
+    background-image: linear-gradient(rgba(13, 32, 85, 0.7),rgba(13, 32, 85, 0.7)),url(images/contact-us-background.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding : 100px 0;
+}
+
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    padding : 0;    
+}
+
+
+/* About Us */
+.footer{
+    color: white;
+    background-color: rgb(1,9,32);
+    width:100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer p{
+    color: white;
+}
+.footer h4{
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa{
+    color: white;
+    margin : 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+
+/* students page */
+.customer-head{
+    background-color: rgb(10,30,63);
+    width: 100%;
+    position: relative;
+}
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: fit-content;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 12px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+/* table */
+table{
+    border-collapse: collapse;
+    margin: 40px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+caption{
+    padding: 10px 5px;
+    font-size: 25px;
+}
+
+thead tr {
+    background-color: rgb(10,30,63);
+    color: #ffffff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(18, 53, 110);
+}
+
+@media(max-width: 700px){
+    table{
+        font-size: 0.6em;
+        margin: 40px 10px;
+    }
+}
+
+/* transfer page */
+
+form{
+    display: block;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+select{
+    padding : 10px 10px;
+    margin : 10px 10px;
+}
+
+label{
+    margin: 10px 10px;
+}
+
+input{
+    margin : 10px 10px;
+    padding : 5px 5px; 
+}
+.form-control{
+    margin : 10px 10px;
+    width: 500px;
+}
+button{
+    margin : 10px 10px;
+    padding : 5px 5px; 
+    cursor: pointer;
+}
+
+/* handler.php */
+
+.transaction-details{
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.h-row{
+    margin: 40px 60% 0 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.h-button{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid rgb(134,231,250);;
+    padding: 12px 34px;
+    font-size: 13px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(10,30,63);
+}
+
+.h-button:hover{
+    border: 1px solid rgb(29, 25, 128);
+    transition: 1s;
+}
+
+@media(max-width: 700px){
+    .h-button{
+        font-size: 12px;
+    }
+}
+
+/*scroll bar customization*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border: 5px solid rgb(235, 228, 228);
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(17, 51, 105);
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #0b487d;
+    border-radius: 10px;
+}
+
+/* Stripe */
+.StripeElement {
+    background-color: white;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+  
